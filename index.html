@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숲속의 스네이크</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="game-card" aria-labelledby="game-title">
+        <header class="game-header">
+          <div>
+            <p class="eyebrow">FOREST PLAYGROUND</p>
+            <h1 id="game-title">숲속의 스네이크</h1>
+            <p class="subtitle">작은 씨앗을 모으며 숲을 누벼보세요.</p>
+          </div>
+          <div class="score-box" aria-live="polite">
+            <span>점수</span>
+            <strong id="score">0</strong>
+          </div>
+        </header>
+
+        <div class="game-area">
+          <div class="canvas-wrap">
+            <canvas id="game-canvas" width="480" height="480" aria-label="스네이크 게임 보드"></canvas>
+            <div class="game-message" id="game-message">
+              <span class="message-leaf">🌿</span>
+              <strong id="message-title">준비됐나요?</strong>
+              <span id="message-text">시작 버튼을 눌러 숲으로 들어가세요.</span>
+            </div>
+          </div>
+
+          <div class="controls-row">
+            <p class="hint"><span>⌨</span> 방향키 또는 WASD로 움직이세요</p>
+            <button class="primary-button" id="start-button" type="button">게임 시작</button>
+          </div>
+
+          <div class="mobile-controls" aria-label="모바일 방향 조작">
+            <button class="direction-button up" data-direction="up" aria-label="위로 이동">↑</button>
+            <button class="direction-button left" data-direction="left" aria-label="왼쪽으로 이동">←</button>
+            <button class="direction-button down" data-direction="down" aria-label="아래로 이동">↓</button>
+            <button class="direction-button right" data-direction="right" aria-label="오른쪽으로 이동">→</button>
+          </div>
+        </div>
+      </section>
+      <p class="footer-note">씨앗을 먹을 때마다 뱀이 한 칸씩 자랍니다.</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
